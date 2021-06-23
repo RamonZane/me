@@ -63,10 +63,10 @@ def stubborn_asker(low, high):
             return("Too high")
         elif guess < low:
             return("Too low")
-        else: 
-            return("Invalid")
     if guess > low and guess < high:
         return("Correct")
+    else: 
+        return("Invalid")
     
 
 
