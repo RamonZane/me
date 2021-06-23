@@ -30,10 +30,14 @@ def fix_it(moves=True, should_move=True):
     """
     return 
     
-    if moves and not should_move: print("Duct tape")
-    elif should_move and not moves: print("WD-40")
-    elif moves == should_move: print("No problem")
-    else: print("Something is not right here, looks expensive")
+    if moves and not should_move: 
+        return("Duct tape")
+    elif should_move and not moves: 
+        return("WD-40")
+    elif moves == should_move: 
+        return("No problem")
+    else: 
+        return("Something is not right here, looks expensive")
 
 
 def loops_1a():
