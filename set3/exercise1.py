@@ -12,7 +12,12 @@ def loop_ranger(start, stop=None, step=1):
     The look up the docs for range(), you can answer this with just the range 
     function, but we'd like you to do it the long way, probably using a loop.
     """
-    return None
+    list = []
+    count = start
+    while count < stop:
+        list.append(count)
+        count = count + step
+    return list
 
 
 def lone_ranger(start, stop, step):
@@ -20,7 +25,11 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    return None
+    list_2 = []
+    for i in range(start, stop, step):
+        list_2.append(i)
+
+    return list_2
 
 
 def two_step_ranger(start, stop):
@@ -29,7 +38,12 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    return None
+
+    list_3 = []
+    for i in range(start, stop, 2):
+        list_3.append(i)
+
+    return list_3
 
 
 def stubborn_asker(low, high):
@@ -40,7 +54,20 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    return None
+    low = input("Enter min: ")
+    high = input("Enter max: ")
+    guess = input("Enter guess: ")
+
+    while guess < low or guess > high:
+        if guess > high:
+            return("Too high")
+        elif guess < low:
+            return("Too low")
+        else: 
+            return("Invalid")
+    if guess > low and guess < high:
+        return("Correct")
+    
 
 
 def not_number_rejector(message):
@@ -51,6 +78,7 @@ def not_number_rejector(message):
     When you do get a number, return it.
     """
     return None
+
 
 
 def super_asker(low, high):
